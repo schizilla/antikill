@@ -1,0 +1,16 @@
+function useCommand.removearms()
+	opx("-","Removed arms")
+	if cmd15(cmdlp) then
+		for _,v in pairs(cmdlp.Character:GetChildren()) do
+			if v.Name == "RightUpperArm" or v.Name == "LeftUpperArm" then
+				v:Destroy()
+			end
+		end
+	else
+		for _,v in pairs(cmdlp.Character:GetChildren()) do
+			if v.Name == "Right Arm" or v.Name == "Left Arm" then
+				v:Destroy()
+			end
+		end
+	end
+end
